@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Merriweather+Sans:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
+@import "//at.alicdn.com/t/font_2352663_5aa9vjhptrd.css"
+
+:root
+  --boxes: #f5f7f9
+  --primary-color: #3884ff
+  --bg-color: white
+  --heading-char-color: #9daab6
+  --boxes-darker2: #bac2c9
+  --font: "Merriweather Sans", 'Source Han Sans SC VF', '楷体', '楷体-简', '思源宋体' !important
+  --code-font: 'Source Code Pro', "Fira Code", "Consolas", 'Source Han Sans SC VF', "楷体", '楷体-简', "思源宋体"
+
+a.sidebar-link 
+  font-weight: 500 !important
+
+body, input, textarea, button
+  font-family: var(--font)
+
+body.theme-light
+  --code-bgcolor: #f6f6f6
+body:not(.theme-dark) .code-group-nav, 
+body.theme-light .code-group-nav
+  background-color: #f6f6f6
+body:not(.theme-dark) .code-group-nav-tab.active, 
+body.theme-light .code-group-nav-tab.active
+  background-color: #f6f6f6
+body:not(.theme-dark) .code-group-nav-tab:hover, 
+body.theme-light .code-group-nav-tab:hover
+  background-color: transparent
+
+body:not(.theme-dark) .code-group-nav-tab.active:before, 
+body.theme-light .code-group-nav-tab.active:before,
+body:not(.theme-dark) .code-group-nav-tab.active:after, 
+body.theme-light .code-group-nav-tab.active:after
+  background: transparent
+
+body:is(:not(.theme-dark), .theme-light, .theme-dark) .theme-default-content :is(p, li, table) code
+  // background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59) !important
+  // -webkit-background-clip: text !important
+  // color: transparent
+  // font-weight: 1000
+  background-color: rgba(255, 229, 100, 0.3)
+  // background-color: rgb(246, 246, 246)
+  padding: .2em .4em
+  border-radius: .2em
+  color: #18045f
+
+code
+  font-weight: 1000
+
+img:not([src*="logo.svg"])
+  display: block
+  max-width: 90%
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 18%), 0 4px 15px 0 rgba(0, 0, 0, 15%)
+  border-radius: 3px
+  margin: 1em auto
+
+.page .page-info,
+.page-nav,
+.code-group-nav-tab,
+.page-meta,
+.vue-run-sfc-header-button
+  font-family: var(--font)!important
+
+code, 
+kbd, 
+.line-number
+  font-family: 'Source Code Pro', "Fira Code", "Consolas", "楷体", '楷体-简', "思源宋体" !important
+
+.CodeMirror
+  font-family: 'Source Code Pro', '楷体' !important
+
+ul, ol
+  line-height: 2
+  padding-left: 2.2em
+
+// blockquote
+blockquote::before
+  content: "❝"
+  color: rgba(64, 184, 250, .5)
+  font-size: 34px
+  line-height: 1
+  font-weight: 700
+blockquote
+  padding: 20px
+  text-size-adjust: 100%
+  line-height: 1.55em
+  font-weight: 400
+  border-radius: 6px
+  color: #2d2e36
+  font-style: normal
+  text-align: left
+  box-sizing: inherit
+  border-left: none
+  border: 1px solid rgba(64, 184, 250, .6)
+  background: rgba(64, 184, 250, .2) 
+blockquote p
+  color: #2d2e36
+blockquote::after
+  content: "❞"
+  color: rgba(64, 184, 250, .5)
+  float: right
+
+.theme-dark blockquote 
+  background: rgba(73, 92, 105, .5)
+  border: 1px solid rgba(73, 92, 105, .6)
+  color: #e2e1e4
+.theme-dark blockquote::before 
+  color: rgba(73, 92, 105, .5)
+.theme-dark blockquote::after 
+  color: rgba(73, 92, 105, .5)
+.theme-dark blockquote p 
+  color: #e2e1e4
+// blockquote 
+//   width: 100%
+//   background-color: var(--boxes)
+//   border-left: 4px solid var(--primary-color)
+//   border-radius: 0.3rem
+//   padding: 1rem
+//   color: black
+//   padding-bottom: 5px
+
+// blockquote > p 
+//   margin-bottom: 20px
+
+// blockquote > p:nth-last-child(1)
+//   margin-bottom: 10px
+
+select 
+  background-color: var(--bg-color) !important
+  border-radius: 0.3rem !important
+  border: solid 1px var(--boxes-darker2) !important
+  box-shadow: none !important
+  color: var(---heading-text-color) !important
+  font-size: 0.9rem !important
+  font-weight: 500 !important
+  padding: 0.3rem !important
+  height: 2.1rem
+  font-family: var(--font)
+  outline: none
+
+select[multiple]
+  height: 6rem
+
+iframe
+  border: none
+
+.code-group-nav-tab
+  border-radius: 0 !important
+
+strong 
+  background: linear-gradient(to right, #00b4db, #0083b0)
+  -webkit-background-clip: text
+  color: transparent
+.theme-dark strong
+  background: linear-gradient(135deg, #CE9FFC 10%, #7367F0 100%)
+  -webkit-background-clip: text
+  color: transparent
+
+// gitalk
+#vuepress-plugin-comment 
+  max-width: 820px
+  margin: 0 auto
+
+.markdown-body .highlight pre, .markdown-body pre
+  background-color: var(--code-bgcolor) !important
+
+// 评论区背景色设置
+.gt-comments
+  margin-top: 10px !important
+  padding: 10px !important
+  border-radius: 5px !important
+  background: #fff !important
+  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, .1),
+              inset -3px -3px 5px rgba(0, 0, 0, .1) !important
+
+.gt-container .gt-comment-admin .gt-comment-content 
+  background: var(--bg-color) !important
+
+.gt-container .gt-comment-content:hover
+  box-shadow: none !important
+
+// gitalk：暗色模式
+.theme-dark .gt-container .gt-comment-admin .gt-comment-content
+  background: #1e1e1e
+.theme-dark .gt-container .gt-comment-body
+  color: var(--textColor) !important
+.theme-dark .gt-container .gt-comment-admin .gt-comment-content 
+  background: #1e1e1e !important
+.theme-dark .gt-comments
+  background: #1e1e1e !important
+  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, .5),
+              inset -3px -3px 5px rgba(0, 0, 0, .5) !important
+
+// 暗色表格设置
+.theme-dark .markdown-body table tr
+  background: #1e1e1e !important
+  border-color: rgb(128, 128, 128) !important
+.theme-dark .markdown-body table th,
+.theme-dark .markdown-body table td
+  border-color: rgb(128, 128, 128) !important
+
+// algolia
+.search-box .DocSearch.DocSearch-Button {
+    cursor: text;
+    width: 10rem;
+    height: 2rem;
+    color: #5b5b5b;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    padding: 0 0.5rem 0 0rem;
+    outline: none;
+    transition: all 0.2s ease;
+    background: transparent;
+    background-size: 1rem;
+}
+
+.search-box .DocSearch-Button-Container {
+    margin-left: 0.4rem;
+}
+
+.search-box .DocSearch-Button .DocSearch-Search-Icon {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 0.1rem;
+}
+
+.search-box .DocSearch-Button-Placeholder {
+    font-size: 0.8rem;
+}
+
+.search-box .DocSearch-Button-Keys {
+    position: absolute;
+    right: 0.1rem;
+}
+
+.search-box .DocSearch-Button-Key {
+    font-size: 12px;
+    line-height: 20px;
+}
