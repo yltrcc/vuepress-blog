@@ -4,7 +4,7 @@ author: 熊滔
 commentid: canvas:advanced
 ---
 
-## 阴影
+## 阴影多对多
 
 ***Canvas*** 中的阴影通过下面四个属性进行设置
 
